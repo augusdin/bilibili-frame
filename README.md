@@ -13,12 +13,26 @@
 
 ## 安装
 
-1. 在本仓库点击 **Code → Download ZIP**，下载并解压。
-2. Chrome 打开 `chrome://extensions`，Edge 打开 `edge://extensions`。
-3. 开启「开发者模式」，点击「加载已解压的扩展程序」。
-4. 选择解压后包含 `manifest.json` 的目录，然后刷新 B 站视频页。
+1. 打开 [Releases 下载页面](https://github.com/augusdin/bilibili-frame/releases/latest)，展开 **Assets**，下载 `bilibili-frame-v版本号.zip` 安装包，而不是下方自动生成的 `Source code`。
+2. 解压 ZIP，将里面的 `bilibili-frame` 文件夹放到一个长期保留的位置。安装后不要删除或移动它，浏览器会直接读取这个目录。
+3. 在浏览器地址栏输入：Chrome 为 `chrome://extensions`，Edge 为 `edge://extensions`。
+4. 开启「开发者模式」，点击「加载已解压的扩展程序」。
+5. 选择 `bilibili-frame` 文件夹：打开这个文件夹应直接看到 `manifest.json`，不要选择 ZIP 文件或它的上一级目录。
+6. 确认扩展列表出现 **Bilibili Frame**，然后刷新已经打开的 B 站视频页。
+7. 播放视频，将鼠标移入播放器，点击底部相机按钮即可下载。也可以在浏览器工具栏的扩展菜单中固定 Bilibili Frame，方便打开设置。
 
 无需构建或安装 npm 依赖。此项目通过 GitHub 分发，尚未上架浏览器扩展商店。
+
+### 更新版本
+
+下载新版本安装包并解压，将文件替换到原安装目录，在扩展管理页点击 Bilibili Frame 的「重新加载」按钮，再刷新视频页。直接替换原目录通常可以保留设置，无需先卸载扩展。
+
+### 安装后没有按钮？
+
+- 确认扩展已启用，并刷新视频页；仅重新打开设置窗口不会加载新版页面脚本。
+- 先让视频正常播放，再将鼠标移入播放器显示控制栏。
+- 若提示找不到 `manifest.json`，请检查选择的文件夹层级。
+- 若浏览器受公司或学校管理、不允许加载扩展，请联系管理员，不要关闭浏览器安全防护。
 
 ## 使用
 
