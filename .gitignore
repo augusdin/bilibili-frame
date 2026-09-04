@@ -1,0 +1,10 @@
+node_modules/
+output/
+outputs/
+.playwright-cli/
+.DS_Store
+*.log
+*.zip
+.env
+.env.*
+TESTING.md

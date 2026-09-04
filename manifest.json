@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Bilibili Frame · 视频帧截图",
+  "version": "1.2.0",
+  "description": "将哔哩哔哩当前视频帧保存为原始分辨率图片。",
+  "permissions": ["storage", "downloads"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Bilibili Frame", "default_popup": "popup.html" },
+  "content_scripts": [{
+    "matches": ["https://www.bilibili.com/*", "https://player.bilibili.com/*"],
+    "js": ["core.js", "icons.js", "subtitles.js", "danmaku.js", "content.js"],
+    "run_at": "document_idle"
+  }],
+  "commands": {
+    "save-frame": {
+      "suggested_key": { "default": "Alt+Shift+S", "mac": "Alt+Shift+S" },
+      "description": "保存当前视频帧"
+    }
+  }
+}

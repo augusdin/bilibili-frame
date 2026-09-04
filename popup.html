@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bilibili Frame 设置</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><span class="mark" data-icon="camera" aria-hidden="true"></span><div><h1>Bilibili Frame</h1><p>截图设置</p></div></header>
+  <main>
+    <section class="guide" aria-label="使用方法">
+      <div class="steps"><span><i data-icon="pause"></i>选好画面</span><i data-icon="arrow-right"></i><span><i data-icon="camera"></i>播放器截图</span><i data-icon="arrow-right"></i><span><i data-icon="download"></i>自动保存</span></div>
+      <p>相机按钮在播放器底部，点击一次即可下载。</p>
+    </section>
+    <fieldset disabled id="settings"><legend>默认输出</legend>
+      <div class="formats" role="group" aria-label="图片格式">
+        <label><input type="radio" name="format" value="png" checked><span>PNG</span></label>
+        <label><input type="radio" name="format" value="jpeg"><span>JPEG</span></label>
+        <label><input type="radio" name="format" value="webp"><span>WebP</span></label>
+      </div>
+      <p id="png-note" class="note">无损压缩 · 保留全部画质</p>
+      <label id="quality-row" hidden>图片质量 <output id="quality-value">85%</output><input id="quality" type="range" min="50" max="100" step="1" value="85"><span class="scale"><span>更小文件</span><span>更高画质</span></span></label>
+      <label class="toggle"><span><strong>包含字幕</strong><small>保存播放器当前显示的字幕</small></span><input id="subtitles" type="checkbox" checked role="switch"></label>
+      <label class="toggle"><span><strong>包含弹幕</strong><small>保存画面上当前可见的弹幕</small></span><input id="danmaku" type="checkbox" checked role="switch"></label>
+      <label class="toggle"><span><strong>播放器截图按钮</strong><small>显示底部相机按钮</small></span><input id="show-button" type="checkbox" checked role="switch"></label>
+    </fieldset>
+    <p class="note">字幕与弹幕可分别关闭；画面内原有文字始终保留。</p>
+    <button id="save-now" type="button" disabled><i data-icon="camera"></i>立即截图并下载</button>
+    <footer><span id="status" role="status" aria-live="polite">正在读取设置…</span><span>Alt / Option + Shift + S</span></footer>
+  </main>
+  <script src="core.js"></script><script src="icons.js"></script><script src="popup.js"></script>
+</body></html>
